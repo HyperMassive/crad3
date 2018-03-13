@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { withStyles } from 'material-ui/styles';
 import Drawer from 'material-ui/Drawer';
 import List from 'material-ui/List';
-import { mailFolderListItems } from './tileData';
+import { drawerItems } from './DrawerContent';
 
 const drawerWidth = 240;
 
@@ -24,7 +24,7 @@ const Crad3Drawer = ({ classes }) => {
       }}
     >
       <div className={classes.toolbar} />
-      <List>{mailFolderListItems}</List>
+      <List>{drawerItems}</List>
     </Drawer>
   );
 };
