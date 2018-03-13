@@ -1,8 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { withStyles } from 'material-ui/styles';
-import Typography from 'material-ui/Typography';
-import { BrowserRouter as Router, Route } from 'react-router-dom';
+import { Route } from 'react-router-dom';
 
 import Crad3AppBar from './layout/Crad3AppBar';
 import Crad3Drawer from './layout/Crad3Drawer';
@@ -28,19 +27,17 @@ const styles = theme => ({
 });
 
 const App = ({ classes }) => (
-  <Router>
-    <div className={classes.root}>
-      <Crad3AppBar />
-      <Crad3Drawer />
+  <div className={classes.root}>
+    <Crad3AppBar />
+    <Crad3Drawer />
 
-      <main className={classes.content}>
-        <div className={classes.toolbar} />
-        <Route exact path="/" component={Welcome} />
-        <Route exact path="/prototype_one" component={PrototypeOne} />
-        <Route exact path="/prototype_two" component={PrototypeTwo} />
-      </main>
-    </div>
-  </Router>
+    <main className={classes.content}>
+      <div className={classes.toolbar} />
+      <Route exact path="/" component={Welcome} />
+      <Route exact path="/prototype_one" component={PrototypeOne} />
+      <Route exact path="/prototype_two" component={PrototypeTwo} />
+    </main>
+  </div>
 );
 
 App.propTypes = {
