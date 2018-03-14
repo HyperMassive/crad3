@@ -11,7 +11,7 @@ const Welcome = () => (
       easily together.
       <br />
       <br />
-      // todo: flesh out and explain other differences.
+      todo: flesh out and explain other differences.
     </Typography>
   </div>
 );
