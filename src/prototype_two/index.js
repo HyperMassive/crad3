@@ -11,6 +11,11 @@ const styles = theme => ({
     marginTop: 10,
     padding: 10,
   },
+  blackBox: {
+    borderWidth: 1,
+    borderColor: 'red',
+    borderStyle: 'dashed',
+  },
 });
 
 class PrototypeTwo extends React.Component {
@@ -55,7 +60,9 @@ class PrototypeTwo extends React.Component {
               this.setState({ selectedDataset: value });
             }}
           />
-          <D3BlackBox nodes={dataset.nodes} links={dataset.links} />
+          <div className={classes.blackBox}>
+            <D3BlackBox nodes={dataset.nodes} links={dataset.links} />
+          </div>
         </Paper>
       </div>
     );
