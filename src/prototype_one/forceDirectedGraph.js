@@ -1,8 +1,9 @@
 import * as d3 from 'd3';
 
-import { miserables } from './miserablesData';
+import cloneMiserablesGraph from '../graph_data/miserablesData';
 
 export const setupGraph = rootSVGElement => {
+  const miserables = cloneMiserablesGraph();
   const width = 500;
   const height = 500;
   const svg = d3

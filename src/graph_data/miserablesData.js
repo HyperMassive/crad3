@@ -1,4 +1,6 @@
-export const miserables = {
+import { cloneDeep } from 'lodash';
+
+const miserables = {
   nodes: [
     { id: 'Myriel', group: 1 },
     { id: 'Napoleon', group: 1 },
@@ -335,3 +337,7 @@ export const miserables = {
     { source: 'Mme.Hucheloup', target: 'Enjolras', value: 1 },
   ],
 };
+
+const cloneMiserablesGraph = () => cloneDeep(miserables);
+
+export default cloneMiserablesGraph;

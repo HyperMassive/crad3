@@ -1,4 +1,6 @@
-export const triangleGraph = {
+import { cloneDeep } from 'lodash';
+
+const triangleGraph = {
   nodes: [
     { id: 'alpha', label: 'Alpha', group: 1 },
     { id: 'beta', label: 'Beta', group: 2 },
@@ -10,3 +12,7 @@ export const triangleGraph = {
     { source: 'gamma', target: 'alpha' },
   ],
 };
+
+const cloneTriangleGraph = () => cloneDeep(triangleGraph);
+
+export default cloneTriangleGraph;

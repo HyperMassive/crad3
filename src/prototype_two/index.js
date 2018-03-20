@@ -3,8 +3,8 @@ import { Typography, Paper, withStyles } from 'material-ui';
 
 import D3BlackBox from './D3BlackBox';
 import DatasetControl from './DatasetControl';
-import { triangleGraph } from './triangleData';
-import { miserables } from './miserablesData';
+import cloneTriangleGraph from '../graph_data/triangleData';
+import cloneMiserablesGraph from '../graph_data/miserablesData';
 
 const styles = theme => ({
   graphPaper: {
@@ -27,9 +27,9 @@ class PrototypeTwo extends React.Component {
     const { classes } = this.props;
     let { selectedDataset } = this.state;
 
-    let dataset = triangleGraph;
+    let dataset = cloneTriangleGraph();
     if (selectedDataset === 'miserables') {
-      dataset = miserables;
+      dataset = cloneMiserablesGraph();
     }
 
     return (
