@@ -35,7 +35,7 @@ class PrototypeTwo extends React.Component {
     return (
       <div>
         <Typography variant="display3">Prototype Two</Typography>
-        <Typography variant="subheading">D3 Black box</Typography>
+        <Typography variant="subheading">D3 Black box v5</Typography>
         <Typography variant="body1">
           Aim: implement a black box or 'DMZ' for d3 to operate within; react
           will ONLY deliver data to the black-box.

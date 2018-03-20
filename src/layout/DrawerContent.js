@@ -43,5 +43,14 @@ export const drawerItems = (
         <ListItemText primary="Prototype Three" />
       </ListItem>
     </Link>
+
+    <Link to="/prototype_four" style={{ textDecoration: 'none' }}>
+      <ListItem button>
+        <ListItemIcon>
+          <PaletteIcon />
+        </ListItemIcon>
+        <ListItemText primary="Prototype Four" />
+      </ListItem>
+    </Link>
   </div>
 );

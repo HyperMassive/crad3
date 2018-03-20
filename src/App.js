@@ -9,6 +9,7 @@ import Welcome from './welcome';
 import PrototypeOne from './prototype_one';
 import PrototypeTwo from './prototype_two';
 import PrototypeThree from './prototype_three';
+import prototypeFour from './prototype_four';
 
 const styles = theme => ({
   root: {
@@ -38,6 +39,7 @@ const App = ({ classes }) => (
       <Route exact path="/prototype_one" component={PrototypeOne} />
       <Route exact path="/prototype_two" component={PrototypeTwo} />
       <Route exact path="/prototype_three" component={PrototypeThree} />
+      <Route exact path="/prototype_four" component={prototypeFour} />
     </main>
   </div>
 );
