@@ -8,7 +8,7 @@ import {
   injectNode,
 } from '../redux/modules/prototype3';
 
-const DatasetActions = ({
+const DatasetControls = ({
   loadTriangleGraph,
   loadLesMisGraph,
   injectSingleNode,
@@ -43,4 +43,4 @@ const mapDispatchToProps = dispatch => ({
   },
 });
 
-export default connect(mapStateToProps, mapDispatchToProps)(DatasetActions);
+export default connect(mapStateToProps, mapDispatchToProps)(DatasetControls);
