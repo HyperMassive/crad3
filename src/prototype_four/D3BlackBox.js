@@ -1,17 +1,15 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { cloneDeep } from 'lodash';
-import { setupGraph } from './forceDirectedGraphP3';
+import { graphManager } from './graphManager';
 
 class D3BlackBox extends React.Component {
   componentDidMount = () => {
     const { nodes, links } = this.props;
-    // clone the data received via props because WILL mutate it via its force simulation.
-    // props mutation is a very big NO NO in react. this is to prevent unintended side-effects.
-    this.graph = setupGraph(this.svg, cloneDeep(nodes), cloneDeep(links));
+    this.graph = new graphManager(this.svg);
+    this.graph.updateGraph(nodes, links);
   };
   shouldComponentUpdate = (nextProps, previousProps) => {
-    this.graph.restart(nextProps.nodes, nextProps.links);
+    this.graph.updateGraph(nextProps.nodes, nextProps.links);
     return false;
   };
   render = () => (
